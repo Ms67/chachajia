@@ -1,25 +1,32 @@
-<view bindtap='pickerClick'><view class="box">{{name}}</view></view>
+<van-search placeholder="输入材料关键字进行搜索" />
 
-<van-popup
-  show="{{ show }}"
-  position="bottom"
-  overlay="{{ true }}"
-  bind:close="onClose"
->
+<view bindtap='disClick'>
+  <view class="box">{{name}}</view>
+</view>
+<view bindtap='timeClick'>
+  <view class="box">时间</view>
+</view>
+
+<!-- 地区选择器 -->
+<van-popup show="{{ showDis }}" position="bottom" overlay="{{ true }}" bind:close="onCloseDis">
   <view class="box">
     <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{value}}" bindchange="bindChange">
-        <picker-view-column>
-            <view wx:for="{{provinces}}">{{item}}</view>
-        </picker-view-column>
-        <picker-view-column>
-            <view wx:for="{{citys}}">{{item}}</view>
-        </picker-view-column>
-        <picker-view-column>
-            <view wx:for="{{areas}}">{{item}}</view>
-        </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{provinces}}">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{areas}}">{{item}}</view>
+      </picker-view-column>
     </picker-view>
-</view>
+  </view>
 </van-popup>
+<!-- 地区选择器 -->
 
-
-
+<!-- 时间选择器 -->
+<van-popup show="{{ showTime }}" position="bottom" overlay="{{ true }}" bind:close="onCloseTime">
+  <van-picker show-toolbar columns="{{ columns }}" bind:change="onChange" />
+</van-popup>
+<!-- 时间选择器 -->

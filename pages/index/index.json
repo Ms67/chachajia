@@ -1,8 +1,9 @@
 {
-    "navigationBarTitleText": "材料价小助手",
-    "usingComponents": {
-      "van-button": "/utils/dist/button/index",
-      "van-popup": "/utils/dist/popup/index"
-      
-    }
+  "navigationBarTitleText": "材料价小助手",
+  "usingComponents": {
+    "van-button": "/utils/dist/button/index",
+    "van-popup": "/utils/dist/popup/index",
+    "van-search": "/utils/dist/search/index",
+    "van-picker": "/utils/dist/picker/index"
+  }
 }
