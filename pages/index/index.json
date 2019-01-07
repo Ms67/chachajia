@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "材料价小助手",
+    "usingComponents": {
+      "van-button": "/utils/dist/button/index",
+      "van-popup": "/utils/dist/popup/index"
+      
+    }
+}

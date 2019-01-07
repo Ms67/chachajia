@@ -1,0 +1,13 @@
+{
+    "pages":[
+        "pages/index/index"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#2d50ac",
+        "navigationBarTitleText": "美妆大咖",
+        "navigationBarTextStyle":"#fff"
+    }
+   
+    
+}
