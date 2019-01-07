@@ -1,4 +1,4 @@
-<view class="head">
+<view class="head" style="position:fixed; top:0;width: 750rpx;">
 <van-search placeholder="输入材料关键字进行搜索" />
 <!-- 顶部菜单栏 -->
 <van-row>
@@ -7,7 +7,7 @@
       <view bindtap='disClick' class="box">{{name}}<van-icon name="arrow-down" /></view>
    
   </van-col>
-  <van-col span="10">
+  <van-col offset='2'span="8">
     
       <view bindtap='timeClick' class="box">2018年12月<van-icon name="arrow-down" /></view>
     
@@ -16,7 +16,7 @@
 <!-- 顶部菜单栏 -->
 </view>
 <!-- 中间列表栏 -->
-<scroll-view scroll-y="{{true}}" style="height: 1200rpx;" >
+<scroll-view scroll-y="{{true}}" style="height: 1050rpx;padding-top:160rpx" >
 <view wx:for="{{array}}"><view class='card'>
 <van-cell
     title="银白色铝合金固定门窗"
