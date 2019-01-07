@@ -3,6 +3,11 @@
 */
 
 
-.box{padding: 20px 15px;}
+.box{padding: 10px 16px;
+border: 1px}
 
 picker-view view{line-height: 50px; padding-left:10px;}
+
+/* .head{
+  position: fixed
+} */

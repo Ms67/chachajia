@@ -1,11 +1,34 @@
+<view class="head">
 <van-search placeholder="输入材料关键字进行搜索" />
+<!-- 顶部菜单栏 -->
+<van-row>
+  <van-col span="14">
+    
+      <view bindtap='disClick' class="box">{{name}}<van-icon name="arrow-down" /></view>
+   
+  </van-col>
+  <van-col span="10">
+    
+      <view bindtap='timeClick' class="box">2018年12月<van-icon name="arrow-down" /></view>
+    
+  </van-col>
+</van-row>
+<!-- 顶部菜单栏 -->
+</view>
+<!-- 中间列表栏 -->
+<scroll-view scroll-y="{{true}}" style="height: 1200rpx;" >
+<view wx:for="{{array}}"><view class='card'>
+<van-cell
+    title="银白色铝合金固定门窗"
+    value="含税:257元/㎡"
+    label ='(PHC)A型 外径Ф300 参考重量135kg 壁厚70mm'
+    size="small"
+  />
+</view></view>
 
-<view bindtap='disClick'>
-  <view class="box">{{name}}</view>
-</view>
-<view bindtap='timeClick'>
-  <view class="box">时间</view>
-</view>
+</scroll-view>
+
+<!-- 中间列表栏 -->
 
 <!-- 地区选择器 -->
 <van-popup show="{{ showDis }}" position="bottom" overlay="{{ true }}" bind:close="onCloseDis">
