@@ -1,5 +1,5 @@
 <view class="head" style="position:fixed; top:0;width: 750rpx;">
-<van-search placeholder="输入材料关键字进行搜索" />
+<van-search placeholder="搜索" />
 <!-- 顶部菜单栏 -->
 <van-row>
   <van-col span="14">
@@ -43,9 +43,9 @@
         <picker-view-column>
             <view wx:for="{{citys}}">{{item}}</view>
         </picker-view-column>
-        <picker-view-column>
+        <!-- <picker-view-column>
             <view wx:for="{{areas}}">{{item}}</view>
-        </picker-view-column>
+        </picker-view-column> -->
     </picker-view>
 </view>
 
