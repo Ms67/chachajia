@@ -4,12 +4,12 @@
 <van-row>
   <van-col span="14">
     
-      <view bindtap='disClick' class="box">{{name}}<van-icon name="arrow-down" /></view>
+      <view bindtap='disClick' class="box">广东-广州<van-icon name="arrow-down" /></view>
    
   </van-col>
   <van-col offset='2'span="8">
     
-      <view bindtap='timeClick' class="box">2018年12月<van-icon name="arrow-down" /></view>
+      <view bindtap='timeClick' class="box">{{xinxinTime}}<van-icon name="arrow-down" /></view>
     
   </van-col>
 </van-row>
@@ -32,24 +32,12 @@
 
 <!-- 地区选择器 -->
 <van-popup show="{{ showDis }}" position="bottom" overlay="{{ true }}" bind:close="onCloseDis">
-  <view class="box">
-    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{value}}" bindchange="bindChange">
-      <picker-view-column>
-        <view wx:for="{{provinces}}">{{item}}</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{citys}}">{{item}}</view>
-      </picker-view-column>
-      <picker-view-column>
-        <view wx:for="{{areas}}">{{item}}</view>
-      </picker-view-column>
-    </picker-view>
-  </view>
+ 
 </van-popup>
 <!-- 地区选择器 -->
 
 <!-- 时间选择器 -->
 <van-popup show="{{ showTime }}" position="bottom" overlay="{{ true }}" bind:close="onCloseTime">
-  <van-picker show-toolbar columns="{{ columns }}" bind:change="onChange" />
+  <van-picker show-toolbar columns="{{ columnsTime }}" bind:change="onChange" title="选择信息价区间" bind:cancel="onTimeCancel" bind:confirm="onTimeConfirm" />
 </van-popup>
 <!-- 时间选择器 -->
