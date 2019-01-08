@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "查价小助手",
+  "navigationBarTitleText": "信息价小助手",
   "usingComponents": {
     "van-button": "/utils/dist/button/index",
     "van-popup": "/utils/dist/popup/index",
@@ -9,6 +9,8 @@
     "van-col": "/utils/dist/col/index",
     "van-cell": "/utils/dist/cell/index",
     "van-cell-group": "/utils/dist/cell-group/index",
-    "van-icon": "/utils/dist/icon/index"
+    "van-icon": "/utils/dist/icon/index",
+    "van-datetime-picker": "/utils/dist/datetime-picker/index"
+    
   }
 }
