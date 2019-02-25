@@ -1,0 +1,14 @@
+  <view class="header">
+    <image class='header-bg' src='/images/banner.jpg'></image>
+    <text class='header-desc'><text class='header-name'>查材价 </text>信息价,市场价 一网打尽</text>
+  </view>
+
+
+
+<l-grid l-class-grid="grid-item" show-border="{{true}}">
+    <l-grid-item 
+      wx:for="{{grids1}}" wx:key="{{index}}" key="{{index}}" slot="{{index}}">
+        <l-icon name="{{item.image}}" />
+        <view class="text">{{item.text}}</view>
+    </l-grid-item>
+</l-grid>

@@ -1,14 +1,13 @@
 {
   "pages": [
-    "pages/index/index"
+  
     
-    
-    
+    "pages/new-index/new-index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#2d50ac",
-    "navigationBarTitleText": "信息价小助手",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "查材价",
+    "navigationBarTextStyle": "black"
   }
 }
