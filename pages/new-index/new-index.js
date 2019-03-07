@@ -5,53 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    grids1: [{
-      image: 'order',
-      text: '我的订单'
-    }, {
-      image: 'cart',
-      text: '我的购物车'
-    }, {
-      image: 'help',
-      text: '帮助中心'
-    }, {
-      image: 'address',
-      text: '地址管理'
-    }, {
-      image: 'order',
-      text: '我的订单'
-    }, {
-      image: 'customer-service',
-      text: '联系客服'
-    }, {
-      image: 'setting',
-      text: '设置'
-    }, {
-      image: 'favor',
-      text: '我的收藏'
-    }, {
-      image: 'eye',
-      text: '我的足迹'
-    }, {
-      image: 'scan',
-      text: '扫一扫'
-    },],
-    grids2: [{
-      image: 'cart',
-      text: '我的购物车'
-    }, {
-      image: 'help',
-      text: '帮助中心'
-    }, {
-      image: 'address',
-      text: '地址管理'
-    }, {
-      image: 'order',
-      text: '我的订单'
-    }, {
-      image: 'customer-service',
-      text: '联系客服'
-    },]
+    value:'',
+    imgUrls: [
+      '/images/banner1.jpg',
+      '/images/banner1.jpg',
+      '/images/banner1.jpg',
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    listData: [
+      { "code": "荷花玉兰方法", "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm", "date": "74130" ,"unit":"元/㎡"},
+      { "code": "彩叶朱槿", "text": "球形自然高度80cm 冠幅60cm 容器苗", "date": "50", "unit": "元/袋" },
+
+      { "code": "荷花玉兰方法丰富", "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm", "date": "4130", "unit": "元/㎡" },
+      { "code": "荷花玉兰方法丰富", "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm", "date": "4130", "unit": "元/㎡" },
+    ]
   },
 
   /**

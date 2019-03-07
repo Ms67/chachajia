@@ -1,14 +1,58 @@
-  <view class="header">
-    <image class='header-bg' src='/images/banner.jpg'></image>
-    <text class='header-desc'><text class='header-name'>查材价 </text>信息价,市场价 一网打尽</text>
+<van-row>
+  <van-col span="5">
+    <view class='local'>
+      <van-icon name="location-o" />
+      <text>深圳市</text>
+    </view>
+  </van-col>
+  <van-col span="19">
+    <view class='search'>
+      <van-search value="{{ value }}" placeholder="输入材料名称进行搜索" show-action="{{false}}" bind:search="onSearch" bind:cancel="onCancel" />
+    </view>
+  </van-col>
+</van-row>
+
+
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="10" indicator-dots="{{true}}" indicator-color="#3683d6" indicator-active-color="snow" autoplay='{{true}}'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width: 100%; height: 150px; background-color: #eeeeee;" mode='scaleToFill' />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">名称</view>
+    <view class="th">规格型号</view>
+    <view class="th ">价格</view>
   </view>
-
-
-
-<l-grid l-class-grid="grid-item" show-border="{{true}}">
-    <l-grid-item 
-      wx:for="{{grids1}}" wx:key="{{index}}" key="{{index}}" slot="{{index}}">
-        <l-icon name="{{item.image}}" />
-        <view class="text">{{item.text}}</view>
-    </l-grid-item>
-</l-grid>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td price">
+        <view>{{item.date}} {{item.unit}}
+          <van-tag color="	coral" plain="{{true}}">除税</van-tag>
+        </view>
+        <view>{{item.date}} {{item.unit}}
+          <van-tag color='mediumseagreen' plain="{{true}}">含税</van-tag>
+        </view>
+      </view>
+    </view>
+    <view class="tr" wx:else style='background:		snow'>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td price">
+        <view>{{item.date}} {{item.unit}}
+          <van-tag color="	coral" plain="{{true}}">除税</van-tag>
+        </view>
+        <view>{{item.date}} {{item.unit}}
+          <van-tag color="mediumseagreen" plain="{{true}}">含税</van-tag>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

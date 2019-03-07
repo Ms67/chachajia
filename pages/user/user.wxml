@@ -1,0 +1,9 @@
+
+<van-button size="large" bind:getuserinfo>大号按钮</van-button>
+
+
+<van-cell
+  title="单元格"
+  icon="location-o"
+  is-link
+/>

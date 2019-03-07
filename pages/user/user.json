@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell": "/utils/dist/cell/index",
+    "van-cell-group": "/utils/dist/cell-group/index",
+    "van-button": "/utils/dist/button/index"
+  }
+}
