@@ -138,3 +138,17 @@ page {
 .price{
   text-align: right
 }
+
+
+
+.box{padding: 20px 15px;}
+
+picker-view view{line-height: 50px; padding-left:10px;}
+
+.list{
+  margin-top: 10rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.titile{
+  padding-bottom: 10rpx
+}

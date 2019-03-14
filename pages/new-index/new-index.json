@@ -9,13 +9,21 @@
     "l-tabpanel": "/dist/tabpanel/index",
     "l-tabs": "/dist/tabs/index",
     "l-button": "/dist/button/index",
+    "l-tag": "/dist/tag/index",
     "l-card": "/dist/card/index",
     "van-row": "/utils/dist/row/index",
     "van-col": "/utils/dist/col/index",
     "van-button": "/utils/dist/button/index",
     "van-search": "/utils/dist/search/index",
     "van-icon": "/utils/dist/icon/index",
-    "van-tag": "/utils/dist/tag/index"
+    "van-tag": "/utils/dist/tag/index",
+    "van-tree-select": "/utils/dist//tree-select/index",
+    "van-popup": "/utils/dist/popup/index",
+    "van-datetime-picker": "/utils/dist/datetime-picker/index",
+    "van-picker": "/utils/dist/picker/index"
+
+
+    
    
   }
 }
