@@ -1,0 +1,28 @@
+<l-slide-view height="140" width="750" slide-width="340"  >
+  <view slot="left" class="left">
+    <view class='left-con'>
+      <text class='left-title'>购买运动器材</text>
+      <text class='left-time'>10-26 18:50</text>
+    </view> 
+    <view class='left-price'><text style="color:rgba(244,81,108,1);">-</text> $2499</view>
+  </view>
+  <view slot="right" class="right">
+    <text class='like'>喜欢</text>
+    <text class='share'>分享</text>
+    <text class='del'>删除</text>
+  </view>
+</l-slide-view>
+<l-slide-view height="140" width="750" slide-width="340"  >
+  <view slot="left" class="left">
+    <view class='left-con'>
+      <text class='left-title'>购买运动器材</text>
+      <text class='left-time'>10-26 18:50</text>
+    </view> 
+    <view class='left-price'><text style="color:rgba(244,81,108,1);">-</text> $2499</view>
+  </view>
+  <view slot="right" class="right">
+    <text class='like'>喜欢</text>
+    <text class='share'>分享</text>
+    <text class='del'>删除</text>
+  </view>
+</l-slide-view>

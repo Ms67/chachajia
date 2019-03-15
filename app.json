@@ -1,9 +1,8 @@
 {
   "pages": [
     "pages/new-index/new-index",
-    "pages/user/user"
-    
-    
+    "pages/user/user",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,26 +10,30 @@
     "navigationBarTitleText": "查材价",
     "navigationBarTextStyle": "black"
   },
-    "tabBar": {
-      "color": "#bbbbbb",
-      "selectedColor": "#3963BC",
-      "backgroundColor": "#ffffff",
-      "borderStyle": "white",
-      "list": [
-        {
-          "pagePath": "pages/new-index/new-index",
-          "text": "首页",
-          "iconPath": "/images/home-un.png",
-          "selectedIconPath": "/images/home.png"
-        },
+  "tabBar": {
+    "color": "#bbbbbb",
+    "selectedColor": "#3963BC",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/new-index/new-index",
+        "text": "首页",
+        "iconPath": "/images/home-un.png",
+        "selectedIconPath": "/images/home.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/user-un.png",
+        "selectedIconPath": "/images/user.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试"
         
-        {
-          "pagePath": "pages/user/user",
-          "text": "我的",
-          "iconPath": "/images/user-un.png",
-          "selectedIconPath": "/images/user.png"
-        }
-      ]
-    },
-    "cloud": true
+      }
+    ]
+  },
+  "cloud": true
 }
