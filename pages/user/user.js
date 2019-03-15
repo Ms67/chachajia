@@ -12,7 +12,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const db = wx.cloud.database();
+    db.collection('vipdata').where({
+      city: '深圳市',
+      // done: false
+    })
+      .get({
+        success(res) {
+          // res.data 是包含以上定义的两条记录的数组
+          console.log('success')
+          console.log(res)
+        },
+        fail(res) {
+          console.log(res.data)
+        }
+      })
   },
 
   /**

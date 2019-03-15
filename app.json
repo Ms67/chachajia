@@ -31,5 +31,6 @@
           "selectedIconPath": "/images/user.png"
         }
       ]
-    }
+    },
+    "cloud": true
 }
