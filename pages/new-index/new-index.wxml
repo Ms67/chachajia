@@ -78,7 +78,7 @@
 </van-popup>
 
 <view class='list'>
-<view class='titile' bindtap='onTabTime'><van-tag mark   type="success"  size="large" color="#3963BC">{{initYear}}{{initMonth}}信息价</van-tag>  </view>
+<view class='titile' ><van-tag mark   type="success"  size="large" color="#3963BC" bindtap='onTabTime'>{{initYear}}{{initMonth}}信息价</van-tag>  </view>
 <view class='list-content'><view class="table">
   <view class="tr bg-w">
     <view class="th">名称</view>
