@@ -26,3 +26,6 @@
     <text class='del'>删除</text>
   </view>
 </l-slide-view>
+
+
+<!-- wx:if="{{index % 2 == 0}}" -->

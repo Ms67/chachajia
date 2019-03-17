@@ -1,6 +1,6 @@
 .left {
   background-color: white;
-  height:100rpx;
+  height:140rpx;
   width: 750rpx;
   display: flex;
   flex-direction: row;
@@ -41,7 +41,7 @@
 }
 
 .right {
-  height: 100rpx;
+  height: 140rpx;
   display: flex;
   direction: row;
   text-align: center;

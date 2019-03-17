@@ -20,7 +20,9 @@
     "van-tree-select": "/utils/dist//tree-select/index",
     "van-popup": "/utils/dist/popup/index",
     "van-datetime-picker": "/utils/dist/datetime-picker/index",
-    "van-picker": "/utils/dist/picker/index"
+    "van-picker": "/utils/dist/picker/index",
+    "l-slide-view": "/dist/slide-view/index",
+    "van-toast": "/utils/dist/toast/index"
 
 
     

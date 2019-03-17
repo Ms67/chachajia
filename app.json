@@ -2,7 +2,9 @@
   "pages": [
     "pages/new-index/new-index",
     "pages/user/user",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/detail/detail",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,7 +33,6 @@
       {
         "pagePath": "pages/test/test",
         "text": "测试"
-        
       }
     ]
   },

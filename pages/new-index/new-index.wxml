@@ -22,39 +22,7 @@
 </swiper>
 
 
-<!-- <view class="table">
-  <view class="tr bg-w">
-    <view class="th">名称</view>
-    <view class="th">规格型号</view>
-    <view class="th ">价格</view>
-  </view>
-  <block wx:for="{{listData}}" wx:key="{{code}}">
-    <view class="tr" wx:if="{{index % 2 == 0}}">
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td price">
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color="	coral" plain="{{true}}">除税</van-tag>
-        </view>
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color='mediumseagreen' plain="{{true}}">含税</van-tag>
-        </view>
-      </view>
-    </view>
-    <view class="tr" wx:else style='background:		snow'>
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td price">
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color="	coral" plain="{{true}}">除税</van-tag>
-        </view>
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color="mediumseagreen" plain="{{true}}">含税</van-tag>
-        </view>
-      </view>
-    </view>
-  </block>
-</view> -->
+
 
 <van-popup
   show="{{ show }}"
@@ -85,11 +53,12 @@
     <view class="th">规格型号</view>
     <view class="th ">价格</view>
   </view>
-  <scroll-view scroll-y="{{true}}" style="height: 1050rpx" >
+  <scroll-view scroll-y="{{true}}" style="height: 588rpx" >
 <block wx:for="{{listData}}" wx:key="{{code}}">
-    <view class="tr" wx:if="{{index % 2 == 0}}">
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
+
+    <view class="tr" >
+      <view class="td name" bindtap='enterDetail' data-name="{{item.code}}" style='color:#3683d6' >{{item.code}}</view>
+      <view class="td" >{{item.text}}</view>
       <view class="td price">
         <view>{{item.date}} {{item.unit}}
           <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
@@ -99,19 +68,10 @@
         </view>
       </view>
     </view>
-    <view class="tr" wx:else style='background:		snow'>
-      <view class="td">{{item.code}}</view>
-      <view class="td">{{item.text}}</view>
-      <view class="td price">
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
-        </view>
-        <view>{{item.date}} {{item.unit}}
-          <van-tag color="grey" plain="{{true}}">含税</van-tag>
-        </view>
-      </view>
-    </view>
-  </block>
+
+
+
+</block>
 
 </scroll-view>
 </view></view>
@@ -125,3 +85,6 @@
 >
 <van-picker columns="{{ columns }}" bind:change="onTimeChange" />
 </van-popup>
+
+<!-- toast 必须组件 -->
+<van-toast id="van-toast" />
