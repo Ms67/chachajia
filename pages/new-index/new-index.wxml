@@ -95,7 +95,7 @@
           <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
         </view>
         <view>{{item.date}} {{item.unit}}
-          <van-tag color='#3683d6' plain="{{true}}">含税</van-tag>
+          <van-tag color='grey' plain="{{true}}">含税</van-tag>
         </view>
       </view>
     </view>
@@ -107,7 +107,7 @@
           <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
         </view>
         <view>{{item.date}} {{item.unit}}
-          <van-tag color="#3683d6" plain="{{true}}">含税</van-tag>
+          <van-tag color="grey" plain="{{true}}">含税</van-tag>
         </view>
       </view>
     </view>
