@@ -60,7 +60,7 @@
       <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' >{{item.name}}</view>
       <view class="td" >{{item.xinghao}}</view>
       <view class="td price">
-        <view wx-if="{{item.pricewithoutaxe != 0}}">{{item.pricewithoutaxe}} {{item.unit}}
+        <view wx-if="{{item.pricewithoutaxe != 0}}">￥{{item.pricewithoutaxe}} 元/{{item.unit}}
           <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
         </view>
         <view wx-if="{{item.pricewithtaxe != 0}}">￥{{item.pricewithtaxe}} 元/{{item.unit}}
