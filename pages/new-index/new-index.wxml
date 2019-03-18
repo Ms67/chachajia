@@ -46,24 +46,24 @@
 </van-popup>
 
 <view class='list'>
-<view class='titile' ><van-tag mark   type="success"  size="large" color="#3963BC" bindtap='onTabTime'>{{initYear}}{{initMonth}}信息价</van-tag>  </view>
+<view class='titile' ><van-tag mark   type="success"  size="large" color="#3963BC" bindtap='onTabTime'>{{initYear}}{{initMonth}}份信息价</van-tag>  </view>
 <view class='list-content'><view class="table">
   <view class="tr bg-w">
     <view class="th">名称</view>
     <view class="th">规格型号</view>
     <view class="th ">价格</view>
   </view>
-  <scroll-view scroll-y="{{true}}" style="height: 588rpx" >
+  <scroll-view scroll-y="{{true}}" style="height: 588rpx" bindscrolltolower="onLower">
 <block wx:for="{{listData}}" wx:key="{{code}}">
 
     <view class="tr" >
-      <view class="td name" bindtap='enterDetail' data-name="{{item.code}}" style='color:#3683d6' >{{item.code}}</view>
-      <view class="td" >{{item.text}}</view>
+      <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' >{{item.name}}</view>
+      <view class="td" >{{item.xinghao}}</view>
       <view class="td price">
-        <view>{{item.date}} {{item.unit}}
+        <view wx-if="{{item.pricewithoutaxe != 0}}">{{item.pricewithoutaxe}} {{item.unit}}
           <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
         </view>
-        <view>{{item.date}} {{item.unit}}
+        <view wx-if="{{item.pricewithtaxe != 0}}">￥{{item.pricewithtaxe}} 元/{{item.unit}}
           <van-tag color='grey' plain="{{true}}">含税</van-tag>
         </view>
       </view>
@@ -72,7 +72,7 @@
 
 
 </block>
-
+<l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~"></l-loadmore>
 </scroll-view>
 </view></view>
 </view>

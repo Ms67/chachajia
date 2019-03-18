@@ -21,11 +21,7 @@
     "van-popup": "/utils/dist/popup/index",
     "van-datetime-picker": "/utils/dist/datetime-picker/index",
     "van-picker": "/utils/dist/picker/index",
-    "l-slide-view": "/dist/slide-view/index",
+    "l-loadmore": "/dist/loadmore/index",
     "van-toast": "/utils/dist/toast/index"
-
-
-    
-   
   }
 }

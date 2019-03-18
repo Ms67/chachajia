@@ -3,8 +3,8 @@ var app = getApp();
 var cityData = require('../../utils/citydata.js');
 
 const citys = {
-  '2019年': ['1月份', '2月份', '3月份', '4月份', '5月份', '6月份', '7月份', '8月份', '9月份', '10月份', '11月份', '12月份'],
-  '2018年': ['1月份', '2月份', '3月份', '4月份', '5月份', '6月份', '7月份', '8月份', '9月份', '10月份', '11月份', '12月份']
+  '2019年': ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', '10月', '11月', '12月'],
+  '2018年': ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', '10月', '11月', '12月']
 };
 
 import Toast from '../../utils/dist/toast/toast';
@@ -25,132 +25,7 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
-    listData: [{
-        "code": "荷花玉兰方法",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "74130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "彩叶朱槿",
-        "text": "球形自然高度80cm 冠幅60cm 容器苗",
-        "date": "50",
-        "unit": "元/袋"
-      },
-
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "74130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "彩叶朱槿",
-        "text": "球形自然高度80cm 冠幅60cm 容器苗",
-        "date": "50",
-        "unit": "元/袋"
-      },
-
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "74130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "彩叶朱槿",
-        "text": "球形自然高度80cm 冠幅60cm 容器苗",
-        "date": "50",
-        "unit": "元/袋"
-      },
-
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "74130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "彩叶朱槿",
-        "text": "球形自然高度80cm 冠幅60cm 容器苗",
-        "date": "50",
-        "unit": "元/袋"
-      },
-
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "74130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "彩叶朱槿",
-        "text": "球形自然高度80cm 冠幅60cm 容器苗",
-        "date": "50",
-        "unit": "元/袋"
-      },
-
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-      {
-        "code": "荷花玉兰方法丰富",
-        "text": "米径5cm 自然高250-300cm 枝下高100-150cm 冠幅100-150cm 土球直径50cm",
-        "date": "4130",
-        "unit": "元/㎡"
-      },
-    ],
+    listData: [],
 
     citysData: cityData.citysData,
     provinces: [],
@@ -176,8 +51,9 @@ Page({
       }
     ],
     initYear:'2018年',
-    initMonth:'12月份',
-    timeShow:false
+    initMonth:'02月',
+    timeShow:false,
+    listNum:0
 
   },
 
@@ -185,7 +61,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    //地区滑动菜单的函数
     this.initData();
+    //更新价格内容数据
+    this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
+
   },
 
   /**
@@ -310,11 +190,21 @@ Page({
       initCity: cityObj.name,
       initLocation: provinceObj.name + '-' + cityObj.name
     });
+
+    
   },
 
 //地区选择关闭层事件
   onClose() {
-    this.setData({ show: false });
+    this.setData({ show: false,
+    listNum:0 });
+    wx.showLoading({
+      title: '更新数据中',
+    });
+
+    //更新数据
+    this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
+    wx.hideLoading()
   },
  //时间选择器滑动事件
   onTimeChange(event) {
@@ -322,6 +212,7 @@ Page({
     picker.setColumnValues(1, citys[value[0]]);
     //console.log(value)
     this.setData({ initYear: value[0],initMonth:value[1] });
+    
   },
   //时间选择弹出事件
   onTabTime: function () {
@@ -329,7 +220,14 @@ Page({
   },
   //时间选择关闭层事件
   onTimeClose() {
-    this.setData({ timeShow: false });
+    this.setData({ timeShow: false,
+    listNum:0 });
+    wx.showLoading({
+      title: '更新数据中',
+    });
+    //更新数据
+    this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
+    wx.hideLoading()
   },
   //点击进入材价详情页面
   enterDetail(e){
@@ -344,5 +242,56 @@ Page({
     wx.navigateTo({
       url: '/pages/search/search',
     })
+  },
+
+  //更新数据函数
+  initListData(city,year,mon,num){
+
+    console.log(
+      {
+        city: city,
+        year:year,
+        mon:mon,
+        num:num
+      }
+    );
+
+    var that = this
+    const db = wx.cloud.database();
+    db.collection('vipdata').where({
+      city: city,
+      year: parseInt(year),
+      mon:mon
+    }).skip(num)
+      .get({
+        success(res) {
+          // res.data 是包含以上定义的两条记录的数组
+          //console.log('success')
+          console.log(res)
+          if (that.data.listNum == 0){
+            that.setData({
+              listData: res.data
+            })
+          }else{
+            that.setData({
+              listData: that.data.listData.concat(res.data)
+            })
+          }
+          
+        },
+        fail(res) {
+          console.log('获取数据出错')
+        }
+      });
+      
+  },
+  //滑动到底刷新数据
+  onLower(){
+    this.setData({
+      listNum: this.data.listNum+20
+    });
+    //更新数据
+    this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
   }
+
 })

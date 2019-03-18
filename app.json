@@ -4,7 +4,8 @@
     "pages/user/user",
     "pages/test/test",
     "pages/detail/detail",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/banner/banner1"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,4 +38,5 @@
     ]
   },
   "cloud": true
+  
 }
