@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-tag": "/utils/dist/tag/index",
+    "l-loadmore": "/dist/loadmore/index"
+  },
   "navigationBarTitleText": "搜索"
 }

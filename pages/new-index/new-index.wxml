@@ -68,10 +68,8 @@
         </view>
       </view>
     </view>
-
-
-
 </block>
+
 <l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~"></l-loadmore>
 </scroll-view>
 </view></view>

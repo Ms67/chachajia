@@ -7,6 +7,7 @@
   line-height: 30rpx;
   margin-top: 9rpx;
 }
+
 .grid-item {
   height: 200rpx;
 }
@@ -14,7 +15,6 @@
 page {
   background: #f7f7f7;
 }
-
 
 .header {
   font-size: 28rpx;
@@ -48,10 +48,7 @@ page {
 
 .header-name {
   font-size: 32rpx;
-  
 }
-
-
 
 .swipeable-header {
   margin: 0 auto;
@@ -59,11 +56,10 @@ page {
   border: 0 !important;
   height: 70rpx !important;
   font-family: PingFangSC-Regular;
-  
 }
 
 .swipeable-class-inactive {
- font-weight: 400 !important;
+  font-weight: 400 !important;
   font-size: 28rpx !important;
   border-width: 6rpx !important;
 }
@@ -72,17 +68,17 @@ page {
   font-weight: 700 !important;
   font-size: 28rpx !important;
   border-width: 6rpx !important;
-  color: #3963BC !important;
+  color: #3963bc !important;
 }
 
-.local{
+.local {
   font-size: 28rpx;
-  height:44px;
+  height: 44px;
   width: 100%;
   font-weight: 400;
-  color: #3683d6 ;
+  color: #3683d6;
   /* line-height: 44px; */
-  background:#f2f2f2;
+  background: #f2f2f2;
   /* padding-left: 10px */
   display: flex;
   align-items: center;
@@ -92,40 +88,35 @@ page {
 .table {
   border: 0px solid darkgray;
   font-size: 12px;
-  background: white
+  background: white;
 }
+
 .tr {
   display: flex;
   width: 100%;
   justify-content: center;
-  height:100rpx;
+  height: 100rpx;
   align-items: center;
 }
+
 .td {
-  
-    width:40%;
-    
-    text-align: center;
-    overflow: hidden;
-   text-overflow:ellipsis;
-   /* white-space: nowrap; */
-
-   
-
-
- display:-webkit-box;
-
- -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
-
- -webkit-box-orient:vertical;
-   
+  width: 40%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient: vertical;
 }
-.bg-w{
+
+.bg-w {
   background: snow;
   font-size: 14px;
   font-weight: 500;
   height: 2rem;
 }
+
 .th {
   width: 40%;
   justify-content: center;
@@ -133,27 +124,31 @@ page {
   color: #282a2c;
   display: flex;
   height: 2rem;
-  align-items: center; 
+  align-items: center;
 }
-.price{
+
+.price {
   text-align: right;
-  padding-right: 20rpx
-}
-.name{
- 
-  
+  padding-right: 20rpx;
 }
 
+.name {
+}
 
+.box {
+  padding: 20px 15px;
+}
 
-.box{padding: 20px 15px;}
+picker-view view {
+  line-height: 50px;
+  padding-left: 10px;
+}
 
-picker-view view{line-height: 50px; padding-left:10px;}
-
-.list{
+.list {
   margin-top: 10rpx;
-  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
 }
-.titile{
-  padding-bottom: 10rpx
+
+.titile {
+  padding-bottom: 10rpx;
 }

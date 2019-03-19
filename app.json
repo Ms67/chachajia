@@ -30,11 +30,8 @@
         "text": "我的",
         "iconPath": "/images/user-un.png",
         "selectedIconPath": "/images/user.png"
-      },
-      {
-        "pagePath": "pages/test/test",
-        "text": "测试"
       }
+      
     ]
   },
   "cloud": true
