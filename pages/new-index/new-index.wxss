@@ -152,3 +152,10 @@ picker-view view {
 .titile {
   padding-bottom: 10rpx;
 }
+
+.tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}

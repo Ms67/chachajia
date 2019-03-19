@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-cell": "/utils/dist/cell/index"
+  },
   "navigationBarTitleText": "材价明细"
 }

@@ -1,1 +1,9 @@
-{{id}}
+<view class="detail-card">
+<view class='titile'>名称 圆钢</view>
+<view class='spec'>规格型号 HPB300 Ф10外</view>
+<view class='price-with-taxe'>含税价格 4858元/t</view>
+<view class='price-without-taxe'>除税价格 </view>
+<view class='disc'>地区归属 广东/深圳市</view>
+<view class='Time'>时间归属 2018年02月份</view>
+<view class='note'>备注 还好啦</view>
+</view>

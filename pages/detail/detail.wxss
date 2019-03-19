@@ -1,1 +1,7 @@
-/* pages/detail/detail.wxss */
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  
+}
