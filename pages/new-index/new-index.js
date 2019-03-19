@@ -246,8 +246,9 @@ Page({
       },
       //点击进入材价详情页面
       enterDetail(e) {
+        // console.log(e);
         wx.navigateTo({
-          url: '/pages/detail/detail',
+          url: '/pages/detail/detail?id='+e.target.dataset.id,
         })
       },
 
