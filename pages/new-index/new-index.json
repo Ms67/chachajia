@@ -23,5 +23,6 @@
     "van-picker": "/utils/dist/picker/index",
     "l-loadmore": "/dist/loadmore/index",
     "van-toast": "/utils/dist/toast/index"
-  }
+  },
+  "enablePullDownRefresh":true
 }

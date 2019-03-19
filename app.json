@@ -11,7 +11,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "查材价",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#bbbbbb",

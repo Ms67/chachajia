@@ -261,12 +261,12 @@ Page({
       //更新数据函数
       initListData(city, year, mon, num) {
 
-        console.log({
-          city: city,
-          year: year,
-          mon: mon,
-          num: num
-        });
+        // console.log({
+        //   city: city,
+        //   year: year,
+        //   mon: mon,
+        //   num: num
+        // });
 
         var that = this
         const db = wx.cloud.database();
@@ -284,16 +284,16 @@ Page({
                   // console.log('20')
                   that.setData({
                     listData: res.data,
-                    listNum: 20
+                    listNum: res.data.length
                   })
                 } else {
                   // console.log('+')
                   // console.log(that.data.listData)
                   that.setData({
                     listData: that.data.listData.concat(res.data),
-                    listNum: that.data.listNum + 20
+                    listNum: that.data.listNum + res.data.length
                   });
-                  console.log('hi')
+                  // console.log('hi')
                   // }
 
                 }},
@@ -305,7 +305,7 @@ Page({
           },
           //滑动到底刷新数据
           onLower() {
-            console.log('low')
+            // console.log('low')
             //更新数据
             this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
           }

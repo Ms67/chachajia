@@ -1,6 +1,6 @@
 <view class='list'>
   <view class='titile'>
-    <van-tag mark type="success" size="large" color="#3963BC" bindtap='onTabTime'>{{initYear}}{{initMonth}}份信息价</van-tag>   <van-tag size="large" color="#3963BC" class="keyword">钢筋</van-tag>
+    <van-tag mark type="success" size="large" color="#3963BC" bindtap='onTabTime'>{{city}}{{year}}{{mon}}份信息价</van-tag>   <van-tag size="large" color="#3963BC" class="keyword">{{keyword}}</van-tag>
   </view>
   <view class='list-content'>
     <view class="table">
@@ -9,7 +9,7 @@
         <view class="th">规格型号</view>
         <view class="th ">价格</view>
       </view>
-      <scroll-view scroll-y="{{true}}" style="height: 1200rpx" bindscrolltolower="onLower">
+      <scroll-view scroll-y="{{true}}" style="height: 1200rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
         <block wx:for="{{listData}}" wx:key="{{code}}">
 
           <view class="tr">
@@ -25,7 +25,8 @@
             </view>
           </view>
         </block>
-        <l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~" wx:if="{{listNum > 15}}"></l-loadmore>
+        <l-loadmore show="{{listNum > 15 && !end}}" type="loading" loading-text="努力加载中~" line="{{true}}"></l-loadmore>
+        <l-loadmore show="{{end}}" type="end" loading-text="我是有底线的~" line="{{true}}" ></l-loadmore>
       </scroll-view>
     </view>
   </view>

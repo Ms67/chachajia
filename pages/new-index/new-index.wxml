@@ -53,7 +53,7 @@
     <view class="th">规格型号</view>
     <view class="th ">价格</view>
   </view>
-  <scroll-view scroll-y="{{true}}" style="height: 588rpx" bindscrolltolower="onLower">
+  <scroll-view scroll-y="{{true}}" style="height: 588rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
 <block wx:for="{{listData}}" wx:key="{{code}}">
 
     <view class="tr" >
@@ -70,7 +70,7 @@
     </view>
 </block>
 
-<l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~"></l-loadmore>
+<l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~" wx:if="{{listNum > 15}}"></l-loadmore>
 </scroll-view>
 </view></view>
 </view>
