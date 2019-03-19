@@ -6,7 +6,7 @@ Page({
    */
   data: {
     listNum: 0,
-    end:false
+    isend:false
   },
 
   /**
@@ -103,7 +103,7 @@ Page({
               listNum: that.data.listNum + res.data.length
             });
             if (res.data.length == 0){
-              that.setData({end:true})
+              that.setData({ isend:true})
             }
           }
         },

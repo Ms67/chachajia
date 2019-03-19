@@ -52,7 +52,8 @@ Page({
         initYear: '2018年',
         initMonth: '02月',
         timeShow: false,
-        listNum: 0
+        listNum: 0,
+        isend:false 
 
       },
 
@@ -293,8 +294,9 @@ Page({
                     listData: that.data.listData.concat(res.data),
                     listNum: that.data.listNum + res.data.length
                   });
-                  // console.log('hi')
-                  // }
+                  if (res.data.length == 0) {
+                    that.setData({ isend: true })
+                  }
 
                 }},
                 fail(res) {

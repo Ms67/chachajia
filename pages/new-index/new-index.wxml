@@ -57,7 +57,7 @@
 <block wx:for="{{listData}}" wx:key="{{code}}">
 
     <view class="tr" >
-      <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' >{{item.name}}</view>
+      <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' data-id="{{item._id}}">{{item.name}}</view>
       <view class="td" >{{item.xinghao}}</view>
       <view class="td price">
         <view wx-if="{{item.pricewithoutaxe != 0}}">￥{{item.pricewithoutaxe}} 元/{{item.unit}}
@@ -71,6 +71,9 @@
 </block>
 
 <l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~" wx:if="{{listNum > 15}}"></l-loadmore>
+<l-loadmore show="{{true}}" type="end" end-text="我是有底线的~" line="{{true}}" wx:if="{{isend}}"></l-loadmore>
+<l-loadmore show="{{true}}" type="end" end-text="{{initCity}}{{initYear}}{{initMonth}}份信息价暂未提供,快去 我的--关于 联系开发者上线吧!"  wx:if="{{!isend && listNum ==0 }}"></l-loadmore>
+
 </scroll-view>
 </view></view>
 </view>

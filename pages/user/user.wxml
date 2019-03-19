@@ -8,7 +8,7 @@
   is-link
 />
 <van-cell
-  title="联系我~"
+  title="关于"
   icon="info-o"
   is-link
 />
