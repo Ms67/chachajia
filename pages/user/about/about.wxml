@@ -1,0 +1,9 @@
+<l-card  type="primary" 
+           l-img-class="right-card" 
+           position="left" 
+           image="/images/3.png"
+    title="嗨,你好！" >
+    <view class="content">
+      很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子...
+    </view>
+  </l-card>

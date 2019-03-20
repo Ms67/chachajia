@@ -1,12 +1,12 @@
 <view class="detail-card">
   <view class='head'>
-    <l-tag shape="circle" size="large" bg-color="#EE5C42">{{name}}</l-tag>
+    <l-tag shape="circle" size="large" bg-color="#EE5C42" style="margin-left:20rpx">{{name}}</l-tag>
     <text style='color:#EE5C42; font-size: 30rpx; font-weight:bold' wx:if="{{pricewithtaxe !=0}}">¥{{pricewithtaxe}}元/{{unit}}</text>
     <text style='color:#EE5C42; font-size: 30rpx; font-weight:bold' wx:else>¥{{pricewithoutaxe}}元/{{unit}}</text>
-    <view class='icon'>
-      <van-icon name="star-o" size='50rpx' style='margin-right:40rpx' wx:if="{{!isStared}}" bindtap='onTabStar' />
-      <van-icon name="star" size='50rpx' style='margin-right:40rpx' wx:else bindtap='onTabStar'/>
-      <van-icon name="share" size='50rpx' bindtap='onTabShare' />
+    <view class='icon' style="margin-right:20rpx">
+      <van-icon name="star-o" size='50rpx'  wx:if="{{!isStared}}" bindtap='onTabStar' />
+      <van-icon name="star" size='50rpx'  wx:else bindtap='onTabStar'/>
+     
     </view>
   </view>
 

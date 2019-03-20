@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/user/about/about.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -62,17 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  //跳转收藏页面
-  clickStar(){
-    wx.navigateTo({
-      url: '/pages/user/star/star',
-    })
-  },
-//跳转关于页面
-  clickAbout() {
-    wx.navigateTo({
-      url: '/pages/user/about/about',
-    })
-  },
+  }
 })

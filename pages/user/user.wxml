@@ -4,11 +4,13 @@
 
 <van-cell
   title="我的收藏"
-  icon="star-o"
+  icon="star"
   is-link
+  bind:click="clickStar"
 />
 <van-cell
   title="关于"
   icon="info-o"
   is-link
+  bind:click="clickAbout"
 />

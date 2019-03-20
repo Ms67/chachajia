@@ -162,7 +162,7 @@ Page({
     })
     try {
       const value = wx.getStorageSync('star')
-      console.log(value)
+      // console.log(value)
       if (value) {
         for(var i=0;i<value.length;i++){
           

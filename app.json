@@ -1,19 +1,20 @@
 {
   "pages": [
-    
     "pages/new-index/new-index",
     "pages/user/user",
     "pages/test/test",
     "pages/detail/detail",
     "pages/search/search",
-    "pages/banner/banner1"
+    "pages/banner/banner1",
+    "pages/user/about/about",
+    "pages/user/star/star"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "white",
     "navigationBarTitleText": "查材价",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#bbbbbb",
@@ -33,9 +34,7 @@
         "iconPath": "/images/user-un.png",
         "selectedIconPath": "/images/user.png"
       }
-      
     ]
   },
   "cloud": true
-  
 }
