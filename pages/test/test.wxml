@@ -1,14 +1,44 @@
 <view class="detail-card">
-<view class='head' >
-<l-tag shape="circle" size="large" bg-color="#EE5C42" >圆钢</l-tag><text style='color:#EE5C42; font-size: 28rpx'>¥1200元/t</text> <view class='icon'><van-icon name="star-o" size='50rpx' style='margin-right:20rpx'/><van-icon name="share" size='50rpx'/></view> </view>
+  <view class='head'>
+    <l-tag shape="circle" size="large" bg-color="#EE5C42">圆钢</l-tag>
+    <text style='color:#EE5C42; font-size: 30rpx; font-weight:bold'>¥1200元/t</text>
+    <view class='icon'>
+      <van-icon name="star-o" size='50rpx' style='margin-right:40rpx' />
+      <van-icon name="share" size='50rpx' />
+    </view>
+  </view>
 
-  <view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>材料名称</text> <text style='margin-left:20rpx'>圆钢</text></view>
-    <view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>规格型号</text> <text style='margin-left:20rpx'>HPB300 Ф10外</text></view>
-<view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>含税价格</text> <text style='margin-left:20rpx'>4858元/t</text></view>
-<view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>除税价格</text> <text style='margin-left:20rpx'>4858元/t</text></view>
-<view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>价格税率</text> <text style='margin-left:20rpx'>7%</text></view>
-<view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>地区归属</text> <text style='margin-left:20rpx'>广东/深圳市</text></view>
-<view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>时间归属</text> <text style='margin-left:20rpx'>2018年12月份</text></view>
- <view class='titile' ><text style='color:rgba(164, 173, 173, 0.548)'>其它备注</text> <text style='margin-left:20rpx'>没有啦</text></view>
-  
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>材料名称</text>
+    <text style='margin-left:20rpx'>圆钢</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>规格型号</text>
+    <text style='margin-left:20rpx'>HPB300 Ф10外</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>含税价格</text>
+    <text style='margin-left:20rpx'>4858元/t</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>除税价格</text>
+    <text style='margin-left:20rpx'>4858元/t</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>价格税率</text>
+    <text style='margin-left:20rpx'>7%</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>地区归属</text>
+    <text style='margin-left:20rpx'>广东/深圳市</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>时间归属</text>
+    <text style='margin-left:20rpx'>2018年12月份</text>
+  </view>
+  <view class='titile'>
+    <text style='color:rgba(164, 173, 173, 0.548)'>其它备注</text>
+    <text style='margin-left:20rpx'>没有啦</text>
+  </view>
+
 </view>

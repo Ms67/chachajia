@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/test/test",
+    
     "pages/new-index/new-index",
     "pages/user/user",
-    
+    "pages/test/test",
     "pages/detail/detail",
     "pages/search/search",
     "pages/banner/banner1"

@@ -114,5 +114,13 @@ Page({
   },
   onLower(){
     this.initSearchListData(this.data.keyword, this.data.city, this.data.year, this.data.mon, this.data.listNum)
-  }
+  },
+  
+  //点击进入材价详情页面
+  enterDetail(e) {
+    // console.log(e);
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + e.target.dataset.id,
+    })
+  },
 })

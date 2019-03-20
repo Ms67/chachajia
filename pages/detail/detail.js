@@ -13,8 +13,12 @@ Page({
    */
   onLoad: function(options) {
     // console.log(options);
+    //存储id数据
     this.setData(options);
-    this.searchById(this.data.id)
+    //根据id查询详细数据
+    this.searchById(this.data.id);
+    //查询该条数据是否被收藏
+    this.isStaredOrNot()
   },
 
   /**
@@ -73,14 +77,55 @@ Page({
       _id: id,
     }).get({
       success(res) {
-        console.log(res.data)
+        // console.log(res.data)
+        that.setData(
+          res.data[0]
+        );
         that.setData({
-          listData: res.data[0],
-        })
+            fullData: res.data[0]
+          }
+
+        )
       },
       fail(res) {
         console.log('获取数据出错')
       }
     })
-  }
+  },
+
+  //点击收藏事件
+  onTabStar() {
+    var that = this
+    if (this.data.isStared) {
+      that.setData({
+        isStared: !this.data.isStared
+      })
+      wx.showToast({
+        title: this.data.isStared ? '收藏成功' : "取消收藏成功",
+        icon: 'success',
+        duration: 2000
+      })
+    }
+  },
+
+  // //初始化页面时 判断收藏夹中是否包含该调数据
+  // isStaredOrNot() {
+  //   var that = this
+  //   wx.getStorage({
+  //       key: 'star',
+  //       success(res) {
+  //         if (JSON.stringify(res).indexOf(JSON.stringify(that.data.fullData) > -1) {
+  //             that.setData({
+  //               isStared: true
+  //             })
+  //           } else {
+  //             that.setData({
+  //               isStared: false
+  //             })
+  //           }
+  //         }
+  //       })
+
+  // }
+  //   }
 })

@@ -1,10 +1,40 @@
+.page{
+  background: #ffffff
+}
+
+
 .detail-card {
   display: flex;
   flex-direction: column;
   background: white;
-  border: 1rpx solid rgba(164, 173, 173, 0.349);
+  border: 1rpx solid rgba(164, 173, 173, 0.548);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin: 10rpx 10rpx
+  margin: 20rpx 20rpx
 
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items:center;
+
+  height: 80rpx;
+  width: 100%;
+  background: rgba(181, 187, 187, 0.164);
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.titile{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items:center;
+
+  height:40rpx;
+  font-size: 24rpx;
+  margin-left: 20rpx
+  
 }

@@ -75,8 +75,9 @@
 
         <view class='tips' wx:if="{{!isend && listNum ==0 }}">
           <icon type='warn' size='70' style='margin-top:20rpx'></icon>
-          <text style='width:70%;margin-top:20rpx; text-align:center;color:#b9bdc1'>{{initCity}}{{initYear}}{{initMonth}}份信息价暂未能提供,快去联系开发者添加上去吧!</text>
-          <van-button type="primary" size='large' style='width:90%;margin-top:30rpx' >马上就去</van-button>
+          <text style='font-size:35rpx;font-weight:bold;margin-top:20rpx'>暂未提供</text>
+          <text style='width:70%;margin-top:20rpx; text-align:center;color:#b9bdc1'>{{initCity}}{{initYear}}{{initMonth}}份信息价暂未能提供,快去 我的-关于 联系开发者添加上线吧!</text>
+          
         </view>
         
       </scroll-view>
