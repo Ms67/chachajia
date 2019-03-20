@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "l-slide-view": "/dist/slide-view/index"
+    "l-slide-view": "/dist/slide-view/index",
+    "l-tag": "/dist/tag/index",
+    "van-icon": "/utils/dist/icon/index"
   }
+  
 }
