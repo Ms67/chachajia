@@ -38,9 +38,9 @@
     <text style='color:rgba(164, 173, 173, 0.548)'>时间归属</text>
     <text style='margin-left:20rpx'>{{year}}年{{mon}}份</text>
   </view>
-  <view class='titile'>
+  <view class='titile' style='height:auto;align-items:start'>
     <text style='color:rgba(164, 173, 173, 0.548);white-space:nowrap;'>其它备注</text>
-    <text style='margin-left:20rpx'>{{note}}</text>
+    <text style='margin-left:20rpx;over'>{{note}}</text>
   </view>
 
 </view>

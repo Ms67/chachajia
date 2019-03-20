@@ -248,7 +248,7 @@ Page({
       enterDetail(e) {
         // console.log(e);
         wx.navigateTo({
-          url: '/pages/detail/detail?id='+e.target.dataset.id,
+          url: '/pages/detail/detail?clid='+e.target.dataset.id,
         })
       },
 

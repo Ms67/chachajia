@@ -16,7 +16,7 @@ Page({
     //存储id数据
     this.setData(options);
     //根据id查询详细数据
-    this.searchById(this.data.id);
+    this.searchById(this.data.clid);
     //查询该条数据是否被收藏
     this.isStaredOrNot()
   },
@@ -95,37 +95,88 @@ Page({
 
   //点击收藏事件
   onTabStar() {
-    var that = this
-    if (this.data.isStared) {
+    var that = this;
+    if (!this.data.isStared) {//原来没有收藏,点击后收藏
+      var tempData = [];
+      try {
+        const value = wx.getStorageSync('star')
+        if (value) {
+          tempData = value
+          tempData.push(that.data.fullData)
+        }
+      } catch (e) {
+        // Do something when catch error
+      }
+      // console.log('最后出来的的元组')
+      // console.log(tempData);
+
+      try {
+        wx.setStorageSync('star', tempData)
+      } catch (e) { };
+
       that.setData({
         isStared: !this.data.isStared
-      })
+      });
       wx.showToast({
-        title: this.data.isStared ? '收藏成功' : "取消收藏成功",
+        title:  '收藏成功',
         icon: 'success',
         duration: 2000
       })
+    }else{//已经收藏.点击取消收藏
+      var tempData = [];
+
+      try {
+        const value = wx.getStorageSync('star')
+        if (value) {
+          tempData=value
+          for (var i = 0; i < value.length; i++) {
+            if (tempData[i]['_id'] == that.data.clid) {
+              tempData.splice(i, 1)
+            }
+          };
+         
+        }
+      } catch (e) {
+        // Do something when catch error
+      }
+      try {
+        wx.setStorageSync('star', tempData)
+      } catch (e) { };
+
+      that.setData({
+        isStared: !this.data.isStared
+      });
+      wx.showToast({
+        title: '取消收藏成功',
+        icon: 'success',
+        duration: 2000
+      })      
     }
   },
 
-  // //初始化页面时 判断收藏夹中是否包含该调数据
-  // isStaredOrNot() {
-  //   var that = this
-  //   wx.getStorage({
-  //       key: 'star',
-  //       success(res) {
-  //         if (JSON.stringify(res).indexOf(JSON.stringify(that.data.fullData) > -1) {
-  //             that.setData({
-  //               isStared: true
-  //             })
-  //           } else {
-  //             that.setData({
-  //               isStared: false
-  //             })
-  //           }
-  //         }
-  //       })
+  //初始化页面时 判断收藏夹中是否包含该调数据
+  isStaredOrNot() {
+    var that = this;
+    that.setData({
+      isStared: false
+    })
+    try {
+      const value = wx.getStorageSync('star')
+      console.log(value)
+      if (value) {
+        for(var i=0;i<value.length;i++){
+          
+          if (value[i]['_id'] == that.data.clid){
+            that.setData({
+              isStared:true
+            })
+          }
+        }
+      }
+    } catch (e) {
+      // Do something when catch error
+    }
 
-  // }
-  //   }
+  }
+    
 })
