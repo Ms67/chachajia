@@ -1,2 +1,46 @@
-<!--pages/user/star/star.wxml-->
-<text>pages/user/star/star.wxml</text>
+<block wx:for="{{listData}}" wx:key="key">
+  <view class="detail-card">
+    <view class='head'>
+      <l-tag shape="circle" size="large" bg-color="#EE5C42" style="margin-left:20rpx">{{item.name}}</l-tag>
+      <text style='color:#EE5C42; font-size: 30rpx; font-weight:bold' wx:if="{{item.pricewithtaxe !=0}}">¥{{item.pricewithtaxe}}元/{{item.unit}}</text>
+      <text style='color:#EE5C42; font-size: 30rpx; font-weight:bold' wx:else>¥{{item.pricewithoutaxe}}元/{{item.unit}}</text>
+      <view class='icon' data-id="{{item._id}}" style="margin-right:20rpx" bindtap='onTabStar' >
+        <van-icon name="star" size='50rpx' />
+      </view>
+    </view>
+
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>材料名称</text>
+      <text style='margin-left:20rpx'>{{item.name}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>规格型号</text>
+      <text style='margin-left:20rpx'>{{item.xinghao}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>含税价格</text>
+      <text style='margin-left:20rpx' wx:if="{{item.pricewithtaxe !=0}}">{{item.pricewithtaxe}}元/{{item.unit}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>除税价格</text>
+      <text style='margin-left:20rpx' wx:if="{{item.pricewithoutaxe !=0}}">{{item.pricewithoutaxe}}元/{{item.unit}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>价格税率</text>
+      <text style='margin-left:20rpx'>{{item.taxe}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>地区归属</text>
+      <text style='margin-left:20rpx'>{{item.province}}/{{item.area}}</text>
+    </view>
+    <view class='titile'>
+      <text style='color:rgba(164, 173, 173, 0.548)'>时间归属</text>
+      <text style='margin-left:20rpx'>{{item.year}}年{{item.mon}}份</text>
+    </view>
+    <view class='titile' style='height:auto;align-items:start'>
+      <text style='color:rgba(164, 173, 173, 0.548);white-space:nowrap;'>其它备注</text>
+      <text style='margin-left:20rpx;over'>{{item.note}}</text>
+    </view>
+
+  </view>
+</block>

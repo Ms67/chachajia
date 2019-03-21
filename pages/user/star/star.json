@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-cell": "/utils/dist/cell/index",
+    "l-tag": "/dist/tag/index",
+    "van-icon": "/utils/dist/icon/index"
+  },
+  "navigationBarTitleText": "我的收藏"
 }

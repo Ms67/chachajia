@@ -1,5 +1,5 @@
 <view class='container'>
-<l-card type="primary" l-img-class="right-card" position="left" image="/images/3.png" title="嗨,你好！">
+<l-card type="primary" l-img-class="right-card" position="left" image="/images/3.png" title="嗨~  你好！">
   <view class="content">
-    这是一款可以随时随地\快速查找\本地收藏\转发分享\当地建材信息价的微信小程序,数据正在添加中,如果您所需的数据暂未提供或有任何意见和建议 ,欢迎您扫描左边二维码进入查材价官方微信群反馈,我们一定会尽快处理! </view>
+    这是一款可以快速\查找\收藏\转发\当地建材信息价的微信小程序.如果您所需的数据暂未提供或有任何意见和建议 ,请扫描左边二维码进入官方微信群反馈! </view>
 </l-card></view>

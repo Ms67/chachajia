@@ -147,7 +147,7 @@ Page({
         isStared: !this.data.isStared
       });
       wx.showToast({
-        title: '取消收藏成功',
+        title: '取消收藏',
         icon: 'success',
         duration: 2000
       })      
