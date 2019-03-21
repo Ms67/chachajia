@@ -18,8 +18,8 @@ Page({
         invalue: '',
         imgUrls: [
           '/images/banner1.jpg',
-          '/images/banner1.jpg',
-          '/images/banner1.jpg',
+          '/images/banner2.jpg',
+          '/images/banner3.jpg',
         ],
         indicatorDots: false,
         autoplay: false,
