@@ -1,5 +1,5 @@
 <view class='container'>
 <l-card type="primary" l-img-class="right-card" position="left" image="/images/3.png" title="嗨~  你好！">
   <view class="content">
-    这是一款可以快速\查找\收藏\转发\当地建材信息价的微信小程序.如果您所需的数据暂未提供或有任何意见和建议 ,请扫描左边二维码进入官方微信群反馈! </view>
+    这是一款可以快速\查找\收藏\转发\当地建材信息价的微信小程序。扫描左边二维码联系我们! </view>
 </l-card></view>
