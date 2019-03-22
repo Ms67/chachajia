@@ -7,8 +7,6 @@
   align-items:center
 }
 
-
-
 .title{
   font-size: 32rpx;
   font-weight: bold;
@@ -20,12 +18,11 @@
   color: gainsboro;
   font-size: 24rpx
 }
+
+
 .question{
   align-self:flex-start;
-  margin-top: 20rpx;
+  margin-top: 70rpx;
   font-weight: bold;
   margin-bottom: 10rpx
-}
-.content{
-  color: gray
 }

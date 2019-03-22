@@ -13,10 +13,10 @@
 
 
 
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="10" indicator-dots="{{true}}" indicator-color="#3683d6" indicator-active-color="snow" autoplay='{{true}}'>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="10" indicator-dots="{{true}}" indicator-color="#3683d6" indicator-active-color="snow" autoplay='{{true}}' current="{{current}}" bindchange='swiperChange'>
   <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" style="width: 100%; height: 150px; background-color: #eeeeee;" mode='scaleToFill' />
+    <swiper-item bindtap="swipClick">
+      <image src="{{item}}" class="slide-image" style="width: 100%; height: 150px; background-color: #eeeeee;" mode='scaleToFill'  />
     </swiper-item>
   </block>
 </swiper>

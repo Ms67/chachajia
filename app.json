@@ -1,13 +1,17 @@
 {
   "pages": [
+    
     "pages/new-index/new-index",
     "pages/user/user",
     "pages/test/test",
     "pages/detail/detail",
     "pages/search/search",
-    "pages/banner/banner1",
+    
     "pages/user/about/about",
-    "pages/user/star/star"
+    "pages/user/star/star",
+    "pages/banner/banner2",
+    "pages/banner/banner1"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
