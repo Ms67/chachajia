@@ -10,12 +10,12 @@
     </view>
   </view>
 
-  <view class='titile'>
-    <text style='color:rgba(164, 173, 173, 0.548)'>材料名称</text>
+  <view class='titile' style='height:auto;align-items:start'>
+    <text style='color:rgba(164, 173, 173, 0.548);white-space:nowrap'>材料名称</text>
     <text style='margin-left:20rpx'>{{name}}</text>
   </view>
-  <view class='titile'>
-    <text style='color:rgba(164, 173, 173, 0.548)'>规格型号</text>
+  <view class='titile'style='height:auto;align-items:start'>
+    <text style='color:rgba(164, 173, 173, 0.548);white-space:nowrap'>规格型号</text>
     <text style='margin-left:20rpx'>{{xinghao}}</text>
   </view>
   <view class='titile'>

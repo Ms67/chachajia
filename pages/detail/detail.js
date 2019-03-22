@@ -15,10 +15,14 @@ Page({
     // console.log(options);
     //存储id数据
     this.setData(options);
+    wx.showLoading({
+      title: '数据加载中',
+    });
     //根据id查询详细数据
     this.searchById(this.data.clid);
     //查询该条数据是否被收藏
     this.isStaredOrNot()
+    wx.hideLoading()
   },
 
   /**
