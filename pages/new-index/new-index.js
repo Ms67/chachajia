@@ -30,7 +30,7 @@ Page({
     interval: 5000,
     duration: 1000,
     listData: [],
-    current:0,
+    current: 0,
 
     citysData: cityData.citysData,
     provinces: [],
@@ -66,6 +66,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.showLoading({
+      title: '数据加载中',
+    });
     var that = this
     //地区滑动菜单的函数
     this.initData();
@@ -73,60 +76,64 @@ Page({
     //从数据库更新默认的时间参数
     const db = wx.cloud.database();
     db.collection('params').get({
-        success(res) {
-          console.log('进入时间更新函数')
-          // res.data 是包含以上定义的两条记录的数组
-          //console.log('success')
-          // console.log(res.data[0]['initYear'])
-          // console.log(res.data[0]['initMon'])
-          that.setData({
-            initYear: res.data[0]['initYear'],
-            initMonth: res.data[0]['initMon'],
-          })
-          
-          // 接着进行自动定位
-          wx.getLocation({
-            type: 'wgs84',
-            success: function (res) {
-              // console.log('获取经纬度成功')
-              // console.log(res)
-              that.setData({ myLatitude: res.latitude, myLongitude: res.longitude })
-              //用腾讯地图的api，根据经纬度获取城市
-              qqmap.reverseGeocoder({
-                location: {
-                  latitude: that.data.myLatitude,
-                  longitude: that.data.myLongitude
-                },
-                success: function (res) {
-                  console.log('进入地区更新函数')
-                  var a = res.result.address_component
-                  //获取市和区（区可能为空）
-                  that.setData({ initCity: a.city })
+      success(res) {
+        console.log('进入时间更新函数')
+        // res.data 是包含以上定义的两条记录的数组
+        //console.log('success')
+        // console.log(res.data[0]['initYear'])
+        // console.log(res.data[0]['initMon'])
+        that.setData({
+          initYear: res.data[0]['initYear'],
+          initMonth: res.data[0]['initMon'],
+        })
 
-                  
-                  //更新价格内容数据
-                  that.initListData(that.data.initCity, that.data.initYear, that.data.initMonth, that.data.listNum);
+        // 接着进行自动定位
+        wx.getLocation({
+          type: 'wgs84',
+          success: function(res) {
+            // console.log('获取经纬度成功')
+            // console.log(res)
+            that.setData({
+              myLatitude: res.latitude,
+              myLongitude: res.longitude
+            })
+            //用腾讯地图的api，根据经纬度获取城市
+            qqmap.reverseGeocoder({
+              location: {
+                latitude: that.data.myLatitude,
+                longitude: that.data.myLongitude
+              },
+              success: function(res) {
+                console.log('进入地区更新函数')
+                var a = res.result.address_component
+                //获取市和区（区可能为空）
+                that.setData({
+                  initCity: a.city
+                })
 
-                },
-                fail: function (res) {
-                  console.log('fail');
-                  console.log(res);
-                }
-              })
-            }
-          });
 
-        },
-        fail(res) {
-          console.log('获取数据出错')
-        }
-      });
+                //更新价格内容数据
+                that.initListData(that.data.initCity, that.data.initYear, that.data.initMonth, that.data.listNum);
+                wx.hideLoading()
 
-    
+              },
+              fail: function(res) {
+                console.log('fail');
+                console.log(res);
+                wx.hideLoading()
+              }
+            })
+          }
+        });
 
- 
-    
-    
+      },
+      fail(res) {
+        console.log('获取数据出错')
+        wx.hideLoading()
+      }
+    });
+
+    wx.hideLoading()
   },
 
   /**
@@ -366,6 +373,7 @@ Page({
         },
         fail(res) {
           console.log('获取数据出错')
+          wx.hideLoading()
         }
       });
 
@@ -377,7 +385,7 @@ Page({
     this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
   },
 
-  swipClick(e){
+  swipClick(e) {
     console.log(this.data.current);
     switch (this.data.current) {
       case 0:
@@ -396,12 +404,14 @@ Page({
         })
         break;
       default:
-        
+
     }
   },
 
-  swiperChange(e){
-    this.setData({current:e.detail.current})
+  swiperChange(e) {
+    this.setData({
+      current: e.detail.current
+    })
   }
 
 })
