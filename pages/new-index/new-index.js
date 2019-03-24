@@ -1,7 +1,11 @@
 var app = getApp();
 
 var cityData = require('../../utils/citydata.js');
-
+var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
+var qqmap = new QQMapWX({
+  //在腾讯地图开放平台申请密钥 http://lbs.qq.com/mykey.html
+  key: '6U5BZ-VQ4E4-7KNUL-XHOYT-ZTLDT-6MF3J'
+});
 const citys = {
   '2019年': ['01月', '02月', '03月'],
   '2018年': ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', '10月', '11月', '12月']
@@ -34,7 +38,7 @@ Page({
     areas: [],
     value: [0, 0, 0],
     name: '',
-    initCity: '深圳市',
+    // initCity: '深圳市',
     initLocation: '广东省-深圳市',
 
     show: false,
@@ -50,8 +54,8 @@ Page({
         defaultIndex: 2
       }
     ],
-    initYear: '2018年',
-    initMonth: '11月',
+    // initYear: '2018年',
+    // initMonth: '11月',
     timeShow: false,
     listNum: 0,
     isend: false
@@ -62,11 +66,67 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var that = this
     //地区滑动菜单的函数
     this.initData();
-    //更新价格内容数据
-    this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
 
+    //从数据库更新默认的时间参数
+    const db = wx.cloud.database();
+    db.collection('params').get({
+        success(res) {
+          console.log('进入时间更新函数')
+          // res.data 是包含以上定义的两条记录的数组
+          //console.log('success')
+          // console.log(res.data[0]['initYear'])
+          // console.log(res.data[0]['initMon'])
+          that.setData({
+            initYear: res.data[0]['initYear'],
+            initMonth: res.data[0]['initMon'],
+          })
+          
+          // 接着进行自动定位
+          wx.getLocation({
+            type: 'wgs84',
+            success: function (res) {
+              // console.log('获取经纬度成功')
+              // console.log(res)
+              that.setData({ myLatitude: res.latitude, myLongitude: res.longitude })
+              //用腾讯地图的api，根据经纬度获取城市
+              qqmap.reverseGeocoder({
+                location: {
+                  latitude: that.data.myLatitude,
+                  longitude: that.data.myLongitude
+                },
+                success: function (res) {
+                  console.log('进入地区更新函数')
+                  var a = res.result.address_component
+                  //获取市和区（区可能为空）
+                  that.setData({ initCity: a.city })
+
+                  
+                  //更新价格内容数据
+                  that.initListData(that.data.initCity, that.data.initYear, that.data.initMonth, that.data.listNum);
+
+                },
+                fail: function (res) {
+                  console.log('fail');
+                  console.log(res);
+                }
+              })
+            }
+          });
+
+        },
+        fail(res) {
+          console.log('获取数据出错')
+        }
+      });
+
+    
+
+ 
+    
+    
   },
 
   /**
@@ -263,17 +323,17 @@ Page({
 
   //更新数据函数
   initListData(city, year, mon, num) {
-
-    // console.log({
-    //   city: city,
-    //   year: year,
-    //   mon: mon,
-    //   num: num
-    // });
+    console.log('初始化数据时的参数')
+    console.log({
+      city: city,
+      year: year,
+      mon: mon,
+      num: num
+    });
 
     var that = this
     const db = wx.cloud.database();
-    db.collection('vipdata').where({
+    db.collection('newvip2').where({
         city: city,
         year: parseInt(year),
         mon: mon
@@ -284,13 +344,13 @@ Page({
           //console.log('success')
           // console.log(res)
           if (that.data.listNum == 0) {
-            // console.log('20')
+            console.log('进入首次加载数据')
             that.setData({
               listData: res.data,
               listNum: res.data.length
             })
           } else {
-            // console.log('+')
+            console.log('进入多次记载数据')
             // console.log(that.data.listData)
             that.setData({
               listData: that.data.listData.concat(res.data),

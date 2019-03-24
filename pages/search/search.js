@@ -71,16 +71,16 @@ Page({
   //更新数据函数
   initSearchListData(keyword,city, year, mon, num) {
 
-    console.log({
-      city: city,
-      year: year,
-      mon: mon,
-      num: num
-    });
+    // console.log({
+    //   city: city,
+    //   year: year,
+    //   mon: mon,
+    //   num: num
+    // });
 
     var that = this
     const db = wx.cloud.database();
-    db.collection('vipdata').where({
+    db.collection('newvip2').where({
         name: { $regex: keyword, $options: "$i" },
         city: city,
         year: parseInt(year),

@@ -26,9 +26,9 @@ App({
     try {
       const res = wx.getStorageInfoSync()
       if (res.keys.indexOf('star') > -1) {
-        console.log('收藏夹已存在')
+        // console.log('收藏夹已存在')
       } else {
-        console.log('收藏夹不存在,已新建');
+        // console.log('收藏夹不存在,已新建');
         try {
           wx.setStorageSync('star', [])
         } catch (e) { }

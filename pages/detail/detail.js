@@ -77,7 +77,7 @@ Page({
   searchById(id) {
     var that = this
     const db = wx.cloud.database();
-    db.collection('vipdata').where({
+    db.collection('newvip2').where({
       _id: id,
     }).get({
       success(res) {

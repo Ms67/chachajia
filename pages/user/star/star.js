@@ -17,7 +17,7 @@ Page({
       const value = wx.getStorageSync('star')
       // console.log(value)
       this.setData({
-        listData: value
+        listData: value.reverse()
       })
 
     } catch (e) {
