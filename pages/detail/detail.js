@@ -22,7 +22,7 @@ Page({
     this.searchById(this.data.clid);
     //查询该条数据是否被收藏
     this.isStaredOrNot()
-    wx.hideLoading()
+    
   },
 
   /**
@@ -89,10 +89,12 @@ Page({
             fullData: res.data[0]
           }
 
-        )
+        );
+        wx.hideLoading()
       },
       fail(res) {
-        console.log('获取数据出错')
+        console.log('获取数据出错');
+        wx.hideLoading()
       }
     })
   },

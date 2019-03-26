@@ -77,7 +77,7 @@ Page({
     const db = wx.cloud.database();
     db.collection('params').get({
       success(res) {
-        console.log('进入时间更新函数')
+        // console.log('进入时间更新函数')
         // res.data 是包含以上定义的两条记录的数组
         //console.log('success')
         // console.log(res.data[0]['initYear'])
@@ -104,7 +104,7 @@ Page({
                 longitude: that.data.myLongitude
               },
               success: function(res) {
-                console.log('进入地区更新函数')
+                // console.log('进入地区更新函数')
                 var a = res.result.address_component
                 //获取市和区（区可能为空）
                 that.setData({
@@ -114,7 +114,7 @@ Page({
 
                 //更新价格内容数据
                 that.initListData(that.data.initCity, that.data.initYear, that.data.initMonth, that.data.listNum);
-                wx.hideLoading()
+                
 
               },
               fail: function(res) {
@@ -133,7 +133,7 @@ Page({
       }
     });
 
-    wx.hideLoading()
+    
   },
 
   /**
@@ -276,7 +276,7 @@ Page({
 
     //更新数据
     this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
-    wx.hideLoading()
+    
   },
   //时间选择器滑动事件
   onTimeChange(event) {
@@ -310,7 +310,7 @@ Page({
     });
     //更新数据
     this.initListData(this.data.initCity, this.data.initYear, this.data.initMonth, this.data.listNum);
-    wx.hideLoading()
+    
   },
   //点击进入材价详情页面
   enterDetail(e) {
@@ -330,13 +330,13 @@ Page({
 
   //更新数据函数
   initListData(city, year, mon, num) {
-    console.log('初始化数据时的参数')
-    console.log({
-      city: city,
-      year: year,
-      mon: mon,
-      num: num
-    });
+    // console.log('初始化数据时的参数')
+    // console.log({
+    //   city: city,
+    //   year: year,
+    //   mon: mon,
+    //   num: num
+    // });
 
     var that = this
     const db = wx.cloud.database();
@@ -351,13 +351,13 @@ Page({
           //console.log('success')
           // console.log(res)
           if (that.data.listNum == 0) {
-            console.log('进入首次加载数据')
+            // console.log('进入首次加载数据')
             that.setData({
               listData: res.data,
               listNum: res.data.length
             })
           } else {
-            console.log('进入多次记载数据')
+            // console.log('进入多次记载数据')
             // console.log(that.data.listData)
             that.setData({
               listData: that.data.listData.concat(res.data),
@@ -369,7 +369,8 @@ Page({
               })
             }
 
-          }
+          };
+          wx.hideLoading()
         },
         fail(res) {
           console.log('获取数据出错')
