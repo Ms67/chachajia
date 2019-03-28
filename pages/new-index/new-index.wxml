@@ -51,7 +51,7 @@
         <view class="th">规格型号</view>
         <view class="th ">价格</view>
       </view>
-      <scroll-view scroll-y="{{true}}" style="height: 700rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
+      <scroll-view scroll-y="{{true}}" style="height: 645rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
         <block wx:for="{{listData}}" wx:key="{{code}}">
 
           <view class="tr">

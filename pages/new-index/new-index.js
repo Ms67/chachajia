@@ -410,9 +410,9 @@ Page({
   },
 
   swiperChange(e) {
-    this.setData({
-      current: e.detail.current
-    })
+    // this.setData({
+    //   current: e.detail.current
+    // })
   }
 
 })

@@ -133,6 +133,9 @@ page {
 }
 
 .name {
+  padding-left: 5rpx;
+  padding-right: 5rpx
+  
 }
 
 .box {
