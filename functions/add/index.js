@@ -15,7 +15,7 @@ exports.main = async (event, context) => {
   const db = cloud.database()
   for (i in datalist){
     try {
-       await db.collection('test').add({
+        db.collection('test').add({
         // data 字段表示需新增的 JSON 数据
         data: datalist[i]
       })

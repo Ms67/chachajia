@@ -162,3 +162,7 @@ picker-view view {
   align-items: center;
   flex-direction: column
 }
+
+.xinghao{
+padding: 0 5rpx
+}

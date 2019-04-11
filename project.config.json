@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.3.0",
+	"libVersion": "2.6.4",
 	"appid": "wx31fec8fad2571972",
 	"projectname": "chachajia",
 	"debugOptions": {
