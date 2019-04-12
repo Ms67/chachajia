@@ -13,7 +13,7 @@
 
 
 
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="10" indicator-dots="{{true}}" indicator-color="gray" indicator-active-color="snow" autoplay='{{true}}' current="{{current}}" bindchange='swiperChange'>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="10" indicator-dots="{{true}}" indicator-color="gray" indicator-active-color="snow" autoplay='{{true}}'  bindchange='swiperChange' current="1" >
   <block wx:for="{{imgUrls}}">
     <swiper-item bindtap="swipClick">
       <image src="{{item}}" class="slide-image" style="width: 100%; height:300rpx; background-color: #eeeeee;" mode='scaleToFill'  />
@@ -58,11 +58,11 @@
             <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' data-id="{{item._id}}">{{item.name}}</view>
             <view class="td xinghao">{{item.xinghao}}</view>
             <view class="td price">
-              <view wx-if="{{item.pricewithoutaxe != 0}}">￥{{item.pricewithoutaxe}} 元/{{item.unit}}
-                <van-tag color="#3683d6" plain="{{true}}">除税</van-tag>
+              <view wx-if="{{item.pricewithoutaxe != 0}}" class='pri'><view >￥{{item.pricewithoutaxe}} 元/{{item.unit}} </view><view style='margin-left:5rpx' ><van-tag color="#3683d6" plain="{{true}}" >除税</van-tag></view>
+                
               </view>
-              <view wx-if="{{item.pricewithtaxe != 0}}">￥{{item.pricewithtaxe}} 元/{{item.unit}}
-                <van-tag color='grey' plain="{{true}}">含税</van-tag>
+              <view wx-if="{{item.pricewithtaxe != 0}}" class='pri'><view>￥{{item.pricewithtaxe}} 元/{{item.unit}} </view><view style='margin-left:5rpx'><van-tag color='grey' plain="{{true}}" >含税</van-tag></view>
+                
               </view>
             </view>
           </view>

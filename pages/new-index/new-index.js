@@ -23,14 +23,14 @@ Page({
     imgUrls: [
       '/images/banner1.jpg',
       '/images/banner2.jpg',
-      '/images/banner3.jpg',
+      
     ],
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
     duration: 1000,
     listData: [],
-    current: 0,
+    page_current: 1,
 
     citysData: cityData.citysData,
     provinces: [],
@@ -387,8 +387,8 @@ Page({
   },
 
   swipClick(e) {
-    console.log(this.data.current);
-    switch (this.data.current) {
+    console.log(this.data.page_current);
+    switch (this.data.page_current) {
       case 0:
         wx.navigateTo({
           url: '/pages/banner/banner1',
@@ -410,9 +410,9 @@ Page({
   },
 
   swiperChange(e) {
-    // this.setData({
-    //   current: e.detail.current
-    // })
+    this.setData({
+      page_current: e.detail.current
+    })
   }
 
 })

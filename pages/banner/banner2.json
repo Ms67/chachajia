@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "文章详情"
+  "usingComponents": {
+    "van-button": "/utils/dist/button/index"
+  },
+  "navigationBarTitleText": "礼包大放送"
 }

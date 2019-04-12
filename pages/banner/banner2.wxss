@@ -1,28 +1,4 @@
-.container{
-  display: flex;
-  flex-direction: column;
-  background: white;
-  padding: 20rpx 20rpx;
-  width: 100%;
-  align-items:center
-}
-
-.title{
-  font-size: 32rpx;
-  font-weight: bold;
-  margin-top: 20rpx;
+.con{
+  padding-top:300rpx 
   
-}
-.time{
-  margin-top: 10rpx;
-  color: gainsboro;
-  font-size: 24rpx
-}
-
-
-.question{
-  align-self:flex-start;
-  margin-top: 70rpx;
-  font-weight: bold;
-  margin-bottom: 10rpx
 }
