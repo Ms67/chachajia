@@ -1,3 +1,6 @@
+<wxs src="./tool.wxs" module="tool" />
+
+
 <van-row>
   <van-col span="5">
     <view class='local' bindtap='onlocalTap'>
@@ -26,7 +29,7 @@
 
 <van-popup show="{{ show }}" position="bottom" overlay="{{ true }}" bind:close="onClose">
   <view class="box">
-    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{value}}" bindchange="bindChange">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height:300rpx;" value="{{value}}" bindchange="bindChange">
       <picker-view-column>
         <view wx:for="{{provinces}}">{{item}}</view>
       </picker-view-column>
@@ -51,17 +54,17 @@
         <view class="th">规格型号</view>
         <view class="th ">价格</view>
       </view>
-      <scroll-view scroll-y="{{true}}" style="height: 600rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
+      <scroll-view scroll-y="{{true}}" style="height: 650rpx" bindscrolltolower="onLower" enable-back-to-top="{{true}}">
         <block wx:for="{{listData}}" wx:key="{{code}}">
 
           <view class="tr">
             <view class="td name" bindtap='enterDetail' data-name="{{item.name}}" style='color:#3683d6' data-id="{{item._id}}">{{item.name}}</view>
             <view class="td xinghao">{{item.xinghao}}</view>
             <view class="td price">
-              <view wx-if="{{item.pricewithoutaxe != 0}}" class='pri'><view >￥{{item.pricewithoutaxe}} 元/{{item.unit}} </view><view style='margin-left:5rpx' ><van-tag color="#3683d6" plain="{{true}}" >除税</van-tag></view>
+              <view wx-if="{{item.pricewithoutaxe != 0}}" class='pri'><view >{{tool.formate(item.pricewithoutaxe)}} 元/{{item.unit}} </view><view style='margin-left:5rpx' ><van-tag color="#3683d6" plain="{{true}}" >除税</van-tag></view>
                 
               </view>
-              <view wx-if="{{item.pricewithtaxe != 0}}" class='pri'><view>￥{{item.pricewithtaxe}} 元/{{item.unit}} </view><view style='margin-left:5rpx'><van-tag color='grey' plain="{{true}}" >含税</van-tag></view>
+              <view wx-if="{{item.pricewithtaxe != 0}}" class='pri'><view>{{tool.formate(item.pricewithtaxe)}} 元/{{item.unit}} </view><view style='margin-left:5rpx'><van-tag color='grey' plain="{{true}}" >含税</van-tag></view>
                 
               </view>
             </view>
@@ -71,13 +74,13 @@
         <l-loadmore show="{{true}}" type="loading" loading-text="努力加载中~" wx:if="{{listNum > 15}}"></l-loadmore>
         <l-loadmore show="{{true}}" type="end" end-text="我是有底线的~" line="{{true}}" wx:if="{{isend}}"></l-loadmore>
 
-        <!-- <l-loadmore show="{{true}}" type="end" end-text="{{initCity}}{{initYear}}{{initMonth}}份信息价暂未提供,快去 我的--关于 联系开发者上线吧!"  wx:if="{{!isend && listNum ==0 }}"></l-loadmore> -->
+  
 
         <view class='tips' wx:if="{{!isend && listNum ==0 }}">
           <icon type='warn' size='70' style='margin-top:20rpx'></icon>
           <text style='font-size:35rpx;font-weight:bold;margin-top:20rpx'>暂未提供</text>
-          <text style='width:70%;margin-top:20rpx; text-align:center;color:#b9bdc1'>{{initCity}}{{initYear}}{{initMonth}}份信息价暂未能提供,快去 我的-关于 联系开发者添加上线吧!</text>
-          
+          <text style='width:70%;margin-top:20rpx; text-align:center;color:#b9bdc1'>{{initCity}}{{initYear}}{{initMonth}}份信息价暂未能提供,快联系开发者添加上线吧!</text>
+          <button size="large" type="primary" open-type="contact">联系开发者</button>
         </view>
         
       </scroll-view>

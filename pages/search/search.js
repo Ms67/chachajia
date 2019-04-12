@@ -13,7 +13,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options);
+    // console.log(options);
+    wx.showLoading({
+      title: '数据加载中',
+    });
     this.setData(options);
     this.initSearchListData(this.data.keyword, this.data.city, this.data.year, this.data.mon, this.data.listNum)
   },
@@ -105,10 +108,12 @@ Page({
             if (res.data.length == 0){
               that.setData({ isend:true})
             }
-          }
+          };
+          wx.hideLoading()
         },
         fail(res) {
-          console.log('获取数据出错')
+          console.log('获取数据出错');
+          wx.hideLoading()
         }
       });
   },

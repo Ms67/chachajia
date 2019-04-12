@@ -2,5 +2,5 @@
   "usingComponents": {
     "van-button": "/utils/dist/button/index"
   },
-  "navigationBarTitleText": "礼包大放送"
+  "navigationBarTitleText": "文章详情"
 }

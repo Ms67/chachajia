@@ -58,7 +58,9 @@ Page({
     // initMonth: '11月',
     timeShow: false,
     listNum: 0,
-    isend: false
+    isend: false,
+
+    
 
   },
 

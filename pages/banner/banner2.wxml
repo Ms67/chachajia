@@ -1,2 +1,9 @@
+<view class='container'>
 
+<view class='title'>造价师考试资料大发送</view>
+  <view class='time'>查材价 2019-04-12</view>
+  
+  <view class='content'>为了庆祝查材价小程序新版本热烈发布,现只需联系客服,回复"大礼包",即可获得造价师视频考试资料,快快行动吧!</view>
+
+</view>
 <view class="con"><van-button size="large" open-type="contact"  type="primary">联系客服</van-button></view>

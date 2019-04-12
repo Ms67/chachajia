@@ -35,8 +35,56 @@
 }
 
 .price {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  /* text-align: right; */
+  padding-left: 20rpx;
   padding-right: 20rpx;
+  /* justify-content: flex-end; */
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  padding-left: 5rpx;
+  padding-right: 5rpx
+  
+}
+
+.box {
+  padding: 20px 15px;
+}
+
+picker-view view {
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+.list {
+  margin-top: 10rpx;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.titile {
+  padding-bottom: 10rpx;
+}
+
+.tips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+
+.xinghao{
+padding: 0 5rpx
+}
+
+.pri{
+  display: flex;
+  /* justify-content: left; */
+  align-items: center;
+  flex-direction: row
 }
 
 .keyword{
