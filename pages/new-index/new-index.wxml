@@ -94,3 +94,5 @@
 
 <!-- toast 必须组件 -->
 <van-toast id="van-toast" />
+<!-- 添加小组件 -->
+<add-tips />

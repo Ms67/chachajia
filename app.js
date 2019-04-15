@@ -1,3 +1,6 @@
+require('./utils/v-request.js')
+
+
 //app.js
 App({
   onLaunch: function() {

@@ -22,7 +22,8 @@
     "van-datetime-picker": "/utils/dist/datetime-picker/index",
     "van-picker": "/utils/dist/picker/index",
     "l-loadmore": "/dist/loadmore/index",
-    "van-toast": "/utils/dist/toast/index"
+    "van-toast": "/utils/dist/toast/index",
+    "add-tips": "/components/weplug-add-tips/index"
   }
   
 }

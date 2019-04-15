@@ -1,6 +1,6 @@
 
 var formate = function (num_str) {
-  if (parseInt(num_str) < 1){
+  if (parseInt(num_str) < 10){
     return parseFloat(num_str)
   } 
   return Math.round(parseFloat(num_str));
